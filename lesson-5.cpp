@@ -13,7 +13,7 @@ class Rectangle:public Shape{
         double width;
     public:
         Rectangle(double l, double w) : length(l), width(w) {}
-    double Area() const override {
+    double Area() const {
         return length * width;
     }
 };

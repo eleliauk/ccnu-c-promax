@@ -9,7 +9,6 @@ using namespace std;
 
 unordered_map<string, string> englishToChinese;
 unordered_map<string, vector<string>> chineseToEnglish;
-
 void loadDictionary(const string &filename) {
     ifstream file(filename);
     if (!file.is_open()) {
@@ -35,7 +34,7 @@ void loadDictionary(const string &filename) {
     file.close();
 }
 
-// 查询英文对应的中文
+// 英 对 中
 void queryEnglish(const string &word) {
     if (englishToChinese.find(word) != englishToChinese.end()) {
         cout << "中文解释: " << englishToChinese[word] << endl;
@@ -43,6 +42,7 @@ void queryEnglish(const string &word) {
         cout << "未找到英文单词: " << word << endl;
     }
 }
+// 中 对 英
 
 void queryChinese(const string &word) {
     if (chineseToEnglish.find(word) != chineseToEnglish.end()) {
